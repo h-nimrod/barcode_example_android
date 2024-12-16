@@ -125,7 +125,16 @@ private fun generateEAN13Barcode(text: String): BarcodeResult? {
         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
         for (x in 0 until width) {
             for (y in 0 until height) {
-                bitmap.setPixel(x, y, if (bitMatrix[x, y]) android.graphics.Color.BLACK else android.graphics.Color.WHITE)
+                val color = if (bitMatrix[x, y]) {
+                    android.graphics.Color.BLACK
+                } else {
+                    android.graphics.Color.WHITE
+                }
+                bitmap.setPixel(
+                    x,
+                    y,
+                    color
+                )
             }
         }
         BarcodeResult(bitmap, text)
