@@ -1,6 +1,6 @@
 # barcode_example_android
 
-This is a sample application built with SwiftUI that generates and displays an EAN13 barcode when a 12-digit or 13-digit number is entered.
+This is a sample application built with Android Jetpack Compose that generates and displays an EAN13 barcode when a 12-digit or 13-digit number is entered.
 
 
 ## Features
